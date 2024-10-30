@@ -48,5 +48,34 @@
 
 ;exercício 7
 (defun junta-listas(listas)
-    ( apply 'append listas )
+    ( apply 'append
+        (mapcar (lambda (x)
+            (if (listp x)
+                x
+                (list x)
+            )
+        ) ;lambda
+        listas
+        )
+        
+    )
+)
+
+;exercício 8
+(defun remove-repetidos(lista)
+    (if (null (rest lista)) 
+        lista
+        (let 
+            ( (resto ( remove-repetidos(cdr lista) ) ) )
+            (if (and
+            
+                 ( not (null resto) )
+                 (equal (car lista) (car resto))
+                
+                )
+                resto
+                (cons (car lista) resto)
+            )
+        )
+    )
 )

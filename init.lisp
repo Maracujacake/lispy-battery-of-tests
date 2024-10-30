@@ -20,3 +20,5 @@
 (teste-palindromo?)
 (format t "~%-----------------------~%~%")
 (teste-junta-listas)
+(format t "~%-----------------------~%~%")
+(teste-remove-repetidos)

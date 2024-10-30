@@ -195,9 +195,9 @@
 ;exercício 7
 (defun teste-junta-listas()
     (let (
-            ( resultado1 ( junta-listas '(1 4 ((5 6) (7)) 8 2) ) )
-            ( resultado2 ( junta-listas '(1 4 ((5) (6)) 5 4 1) ) )
-            ( resultado3 ( junta-listas '((((1)))) ) )
+            ( resultado1 ( junta-listas '(1 4 (5 6) (7) 8 2) ) )
+            ( resultado2 ( junta-listas '(1 4 (5) (6) 5 4 1) ) )
+            ( resultado3 ( junta-listas '(((1))) ) )
             ( resultado4 ( junta-listas '(() () () ()) ) )
          )
     
@@ -217,6 +217,38 @@
         )
 
         (if (equal resultado4 '())
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
+
+
+;exercício 8
+(defun teste-remove-repetidos()
+    (let (
+            ( resultado1 ( remove-repetidos '(1 4 4 2 2 3) ) )
+            ( resultado2 ( remove-repetidos '(0 4 5 4 1) ) )
+            ( resultado3 ( remove-repetidos '(5 2 2 1 3 4 5 2) ) )
+            ( resultado4 ( remove-repetidos '() ) )
+         )
+    
+        (if (equal resultado1 '(1 4 2 3))
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '(0 4 5 4 1))
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '(5 2 1 3 4 5 2))
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (null resultado4)
             (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
             (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
         )
