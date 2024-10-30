@@ -6,7 +6,15 @@
 (load "./testes/tests.lisp")   ;; Arquivo contendo os testes.
 
 ;; Executar os testes automaticamente ao carregar o init.lisp
+(format t "~%-------------INICIANDO TESTES----------~%~%")
 (teste-ultimo-elemento) ;; Chama a função de teste
 (format t "~%-----------------------~%~%")
 (teste-dois-ultimos-elementos)
 (format t "~%-----------------------~%~%")
+(teste-elemento-by-index)
+(format t "~%-----------------------~%~%")
+(teste-tamanho-lista)
+(format t "~%-----------------------~%~%")
+(teste-inverte-lista)
+(format t "~%-----------------------~%~%")
+(teste-palindromo?)

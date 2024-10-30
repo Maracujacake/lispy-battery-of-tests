@@ -19,3 +19,34 @@
         )
     )
 )
+
+
+; exercício 3
+(defun elemento-by-index(lista i)
+    (if ( or ( > i (length lista) ) ( <= i 0) )
+        nil
+        (nth (- i 1) lista)
+    )
+)
+
+;exercício 4
+(defun tamanho-lista(lista)
+    (length lista)
+)
+
+
+;exercício 5
+(defun inverte-lista(lista)
+    (reverse lista)
+)
+
+
+;exercício 6
+(defun palindromo?(lista)
+    ( equal lista (reverse lista) )
+)
+
+;exercício 7
+(defun junta-listas(listas)
+    
+)
