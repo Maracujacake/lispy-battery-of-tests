@@ -18,3 +18,5 @@
 (teste-inverte-lista)
 (format t "~%-----------------------~%~%")
 (teste-palindromo?)
+(format t "~%-----------------------~%~%")
+(teste-junta-listas)

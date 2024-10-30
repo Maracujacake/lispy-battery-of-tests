@@ -48,5 +48,5 @@
 
 ;exercício 7
 (defun junta-listas(listas)
-    
+    ( apply 'append listas )
 )
