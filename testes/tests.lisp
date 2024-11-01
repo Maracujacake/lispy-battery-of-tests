@@ -254,3 +254,34 @@
         )
     )
 )
+
+;exercício 9
+(defun teste-consecutivos-to-sublista()
+    (let (
+            ( resultado1 ( consecutivos-to-sublista '(1 1 2 3 3 3 4 5 5) ) )
+            ( resultado2 ( consecutivos-to-sublista '(0 4 5 4 1) ) )
+            ( resultado3 ( consecutivos-to-sublista '(5 2 2 1 3 4 5 2) ) )
+            ( resultado4 ( consecutivos-to-sublista '() ) )
+         )
+    
+        (if (equal resultado1 '( (1 1) (2) (3 3 3) (4) (5 5) ) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '(0 4 5 4 1))
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '(5 2 1 3 4 5 2))
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (null resultado4)
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)

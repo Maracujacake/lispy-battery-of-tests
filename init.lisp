@@ -22,3 +22,5 @@
 (teste-junta-listas)
 (format t "~%-----------------------~%~%")
 (teste-remove-repetidos)
+(format t "~%-----------------------~%~%")
+(teste-consecutivos-to-sublista)

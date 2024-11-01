@@ -79,3 +79,29 @@
         )
     )
 )
+
+;exercício 9
+(defun consecutivos-to-sublista (lista)
+    (let(
+        ( resultado nil)
+        ( sublista  nil)
+        ( anterior  nil)
+        )
+
+        (dolist( elemento lista(reverse resultado))
+            (if( equal elemento anterior)
+                (push elemento sublista)
+                (progn
+                    (when sublista
+                        (push (reverse sublista) resultado)
+                    )
+                    (setf sublista (list elemento))
+                )
+            )
+            (setf anterior elemento))
+            (when sublista
+                (push (reverse sublista) resultado)
+            )
+            ( reverse resultado)
+    )
+)
