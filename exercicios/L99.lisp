@@ -252,3 +252,65 @@
     )
 )
 
+;exercício 19
+;roda a lista x posições para a esquerda
+(defun  rotate-left-list (lista x)
+    (if(= (length lista) 0)
+        nil
+        (if (< x 0)
+            (append (subseq lista (+ (length lista) x)) (subseq lista 0 (+ (length lista) x)) )
+            (append (subseq lista x) (subseq lista 0 x))
+        )
+    )
+)
+
+
+;exercício 20
+;igual ao exercício 16
+(defun remove-by-k (lista k)
+    (if (= (length lista) 0)
+        nil
+        (append ( subseq lista 0 k ) ( subseq lista (+ k 1) ))
+    )
+)
+
+;exercício 21
+;insere element na lista na posicao x
+(defun insert-at-x (lista element x)
+    (if (= (length lista) 0)
+        nil
+        (append 
+            (subseq lista 0 x)
+            (list element)
+            (subseq lista (+ x 1))
+        )
+    )
+)
+
+
+;exercício 22
+(defun list-by-range (x y)
+    (let(
+            (lista-final nil)
+        )
+        (dotimes (i (- y x))
+            (push (+ i x) lista-final)
+        )
+        (push y lista-final)
+        ( reverse lista-final )
+    )
+)
+
+;exercício 23
+; extrai x valores aleatorios de uma lista
+(defun random-elements-extraction (lista x)
+    (let(
+            (lista-final nil)
+        )
+        (dotimes (i x)
+            (push (nth (random(length lista)) lista) lista-final)
+        )
+        (reverse lista-final)
+    )
+)
+
