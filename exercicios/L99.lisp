@@ -105,3 +105,110 @@
             ( reverse resultado)
     )
 )
+
+;exercício 10
+(defun num-elementos-sublista (lista)
+    (let(
+            ( lista-final nil )
+            ( lista-agrupada (consecutivos-to-sublista lista) )
+        )
+
+    (dolist ( elemento lista-agrupada (reverse lista-final) )
+        (push (list (length elemento) (first elemento) ) lista-final )
+    )
+    )
+)
+
+;exercício 11
+(defun modified-num-elementos-sublista (lista)
+    (let(
+            (lista-final nil)
+            (lista-agrupada (consecutivos-to-sublista lista) )
+        )
+    
+    (dolist (elemento lista-agrupada(reverse lista-final) )
+        (if (= (length elemento) 1)
+            (push (first elemento) lista-final)
+            (push (list (length elemento) (first elemento) ) lista-final)
+        )
+    )
+    )
+)
+
+;exercício 12
+(defun decode-num-elementos-sublista (lista)
+    (let(
+            (lista-final nil)
+        )
+    
+    (dolist (elemento lista(reverse lista-final) )
+        (if (listp elemento)
+            (dotimes (i (first elemento))
+                (push (rest elemento) lista-final)
+            )
+            (push (list elemento ) lista-final)
+        )
+    )
+    )
+)
+
+;exercício 13
+(defun decode-again-lista (lista)
+
+    (let(
+            (lista-final nil)
+            (contador 1)
+            (anterior (first lista))
+        )
+
+            (dolist (elemento (rest lista) (reverse lista-final))
+                (if (equal elemento anterior)
+                    (incf contador)
+                    (progn
+                        (if (> contador 1)
+                            (push (list contador anterior) lista-final)
+                            (push anterior lista-final)
+                        )
+                        (setf contador 1)
+                        (setf anterior elemento)
+                    )
+                )
+            )
+            (push 
+                (if (contador > 1)
+                    (list contador anterior)
+                    anterior
+                )
+            lista-final)
+    )
+)
+
+
+;exercício 14
+(defun duplicar-elemento(lista)
+    (let(
+            (lista-final nil)
+        ) 
+        (dolist ( elemento lista (reverse lista-final) )
+            (progn
+                (push elemento lista-final)
+                (push elemento lista-final)       
+            )
+        )
+    )
+)
+
+;exercício 15
+(defun multiplica-elementos-by-x (lista x)
+    (let(
+            ( lista-final nil )
+        )
+
+        (dolist (elemento lista (reverse lista-final)) 
+            (dotimes (i x)
+                (push elemento lista-final)
+            )
+        )
+    )
+)
+

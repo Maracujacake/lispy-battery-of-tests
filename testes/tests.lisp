@@ -260,7 +260,7 @@
     (let (
             ( resultado1 ( consecutivos-to-sublista '(1 1 2 3 3 3 4 5 5) ) )
             ( resultado2 ( consecutivos-to-sublista '(0 4 5 4 1) ) )
-            ( resultado3 ( consecutivos-to-sublista '(5 2 2 1 3 4 5 2) ) )
+            ( resultado3 ( consecutivos-to-sublista '(5 2 2 1 3 4 4 5 2) ) )
             ( resultado4 ( consecutivos-to-sublista '() ) )
          )
     
@@ -269,12 +269,12 @@
             (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
         )
 
-        (if (equal resultado2 '(0 4 5 4 1))
+        (if (equal resultado2 '( (0) (4) (5) (4) (1) ))
             (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
             (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
         )
 
-        (if  (equal resultado3 '(5 2 1 3 4 5 2))
+        (if  (equal resultado3 '( (5) (2 2) (1) (3) (4 4) (5) (2) ))
             (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
             (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
         )
@@ -285,3 +285,193 @@
         )
     )
 )
+
+;exercício 10
+(defun teste-num-elementos-sublista()
+    (let (
+            ( resultado1 ( num-elementos-sublista '(1 1 2 3 3 3 4 5 5) ) )
+            ( resultado2 ( num-elementos-sublista '(0 4 5 4 1) ) )
+            ( resultado3 ( num-elementos-sublista '(5 2 2 1 3 4 4 5 2) ) )
+            ( resultado4 ( num-elementos-sublista '() ) )
+         )
+    
+        (if (equal resultado1 '( (2 1) (1 2) (3 3) (1 4) (2 5) ) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '( (1 0) (1 4) (1 5) (1 4) (1 1) ))
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '( (1 5) (2 2) (1 1) (1 3) (2 4) (1 5) (1 2) ))
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (null resultado4)
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
+
+;exercício 11
+(defun teste-modified-num-elementos-sublista()
+    (let (
+            ( resultado1 ( modified-num-elementos-sublista '(1 1 2 3 3 3 4 5 5) ) )
+            ( resultado2 ( modified-num-elementos-sublista '(0 4 5 4 1) ) )
+            ( resultado3 ( modified-num-elementos-sublista '(5 2 2 1 3 4 4 5 2) ) )
+            ( resultado4 ( modified-num-elementos-sublista '() ) )
+         )
+    
+        (if (equal resultado1 '( (2 1) 2 (3 3) 4 (2 5) ) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '( 0 4 5 4 1 ))
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '( 5 (2 2) 1 3 (2 4) 5 2 ))
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (null resultado4)
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
+
+
+;exercício 12
+(defun teste-decode-num-elementos-sublista()
+    (let (
+            ( resultado1 ( decode-num-elementos-sublista '( (2 1) 2 (3 3) 4 (2 5) )  ) )
+            ( resultado2 ( decode-num-elementos-sublista '( 0 4 5 4 1 ) ) )
+            ( resultado3 ( decode-num-elementos-sublista '( 5 (2 2) 1 3 (2 4) 5 2 ) ) )
+            ( resultado4 ( decode-num-elementos-sublista '() ) )
+         )
+    
+        (if (equal resultado1 '( (1) (1) (2) (3) (3) (3) (4) (5) (5) ) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '( (0) (4) (5) (4) (1) ))
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '( (5) (2) (2) (1) (3) (4) (4) (5) (2) ))
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (null resultado4)
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
+
+;exercício 13
+(defun teste-decode-again-lista()
+    (let (
+            ( resultado1 ( decode-again-lista '(1 1 2 3 3 3 4 5 5) ) )
+            ( resultado2 ( decode-again-lista '(0 4 5 4 1) ) )
+            ( resultado3 ( decode-again-lista '(5 2 2 1 3 4 4 5 2) ) )
+            ( resultado4 ( decode-again-lista '() ) )
+         )
+    
+        (if (equal resultado1 '( (2 1) 2 (3 3) 4 (2 5) ) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '( 0 4 5 4 1 ))
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '( 5 (2 2) 1 3 (2 4) 5 2 ))
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (null resultado4)
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
+
+
+;exercício 14
+(defun teste-duplicar-elemento()
+    (let (
+            ( resultado1 ( duplicar-elemento '(1 1 2 3 3 3 4 5 5) ) )
+            ( resultado2 ( duplicar-elemento '(0 4 5 4 1) ) )
+            ( resultado3 ( duplicar-elemento '(5 2 2 1 3 4 4 5 2) ) )
+            ( resultado4 ( duplicar-elemento '() ) )
+         )
+    
+        (if (equal resultado1 '( 1 1 1 1 2 2 3 3 3 3 3 3 4 4 5 5 5 5 ) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '( 0 0 4 4 5 5 4 4 1 1 ))
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '( 5 5 2 2 2 2 1 1 3 3 4 4 4 4 5 5 2 2 ))
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (null resultado4)
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
+
+
+;exercício 15
+(defun teste-multiplica-elementos-by-x()
+    (let (
+            ( resultado1 ( multiplica-elementos-by-x '(1 1 2 3 3 3 4 5 5) 2 ) )
+            ( resultado2 ( multiplica-elementos-by-x '(0 4 5 4 1) 2 ) )
+            ( resultado3 ( multiplica-elementos-by-x '(5 2 2 1 3 4 4 5 2) 2 ) )
+            ( resultado4 ( multiplica-elementos-by-x '() 2 ) )
+         )
+    
+        (if (equal resultado1 '( 1 1 1 1 2 2 3 3 3 3 3 3 4 4 5 5 5 5 ) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '( 0 0 4 4 5 5 4 4 1 1 ))
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '( 5 5 2 2 2 2 1 1 3 3 4 4 4 4 5 5 2 2 ))
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (null resultado4)
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
+
