@@ -734,3 +734,68 @@
         )
     )
 )
+
+
+;exercício 24
+(defun teste-random-elements-by-interval()
+    (let (
+            ( resultado1 ( random-elements-by-interval 2 46) )
+            ( resultado2 ( random-elements-by-interval 3 22 ) )
+            ( resultado3 ( random-elements-by-interval 4 44 ) )
+            ( resultado4 ( random-elements-by-interval 1 2 ) )
+         )
+    
+        (if (not (null resultado1) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (not (null resultado2) )
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (not (null resultado3) )
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (not (null resultado4) )
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
+
+
+;exercício 25
+; NÃO PASSAR LISTAS COM ELEMENTOS REPETIDOS ATE QUE A FUNÇÃO ESTEJA POLIDA
+(defun teste-random-permutation ()
+    (let (
+            ( resultado1 ( random-permutation  '(1 5 6 4 7 2)) )
+            ( resultado2 ( random-permutation  '(2 4 7 8 6 5 456 56) ) )
+            ( resultado3 ( random-permutation  '(41 54 8489 48 48941 254) ) )
+            ( resultado4 ( random-permutation  '(1454 8 4 5641565 14 51) ) )
+         )
+    
+        (if (not (null resultado1) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (not (null resultado2) )
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (not (null resultado3) )
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (not (null resultado4) )
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)

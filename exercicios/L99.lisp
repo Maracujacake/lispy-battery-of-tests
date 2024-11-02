@@ -314,3 +314,39 @@
     )
 )
 
+
+;exercício 24
+; retorna x numeros aleatorios de uma lista de 1 até y
+(defun random-elements-by-interval (x y)
+    (let(
+            (lista-final nil)
+        ) 
+        (dotimes (i x)
+            (push (random y) lista-final)
+        )
+        (reverse lista-final)
+    )
+)
+
+
+;exercício 25
+; CUIDADO, SE A LISTA TIVER ELEMENTOS REPETIDOS, RESULTARA EM LOOP INFINITO
+(defun random-permutation (lista)
+    (let(
+            (lista-final nil)
+        )
+
+        (loop 
+            (let(
+                    ( novo-elemento (nth (random (length lista)) lista) )
+                )
+                    
+                (unless (member novo-elemento lista-final)
+                    (push novo-elemento lista-final)      
+                )
+                (when (= (length lista-final) (length lista))
+                    (return lista-final))
+            )
+        )
+    )
+)
