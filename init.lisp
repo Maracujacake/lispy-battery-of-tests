@@ -51,6 +51,12 @@
 (format t "~%-----------------------~%~%")
 (format t "~%-----------Exercício 15------------~%~%")
 (teste-multiplica-elementos-by-x)
-
-
-
+(format t "~%-----------------------~%~%")
+(format t "~%-----------Exercício 16------------~%~%")
+(teste-remove-index-x)
+(format t "~%-----------------------~%~%")
+(format t "~%-----------Exercício 17------------~%~%")
+(teste-split-in-2-parts)
+(format t "~%-----------------------~%~%")
+(format t "~%-----------Exercício 18------------~%~%")
+(teste-slice-of-list)

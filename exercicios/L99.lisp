@@ -212,3 +212,43 @@
     )
 )
 
+;exercício 16
+(defun remove-index-x (lista x)
+    (if (= (length lista) 0)
+        nil
+        (let(
+            (lista-final nil)
+            )
+        (append (subseq lista 0 x) (subseq lista (+ x 1) ))
+        )
+    )
+
+)
+
+;exercício 17
+; corta a lista em 2 partes, aonde a primeira parte tem tamanho x
+(defun split-in-2-parts (lista x)
+    (if (= (length lista) 0)
+        nil
+        (let(
+                (lista-final nil)
+            )
+            (append lista-final (append (subseq lista 0 x) (subseq lista (+ x 1)) ) )
+            
+        )
+    )
+)
+
+
+;exercício 18
+;pega uma fatia entre x e y de uma lista
+(defun slice-of-list (lista x y)
+    (if (= (length lista) 0)
+        nil
+        (if (> x y)
+            (format t "~%por favor, insira um intervalo válido, onde x < y~%")
+            (subseq lista (- x 1) y)
+        )
+    )
+)
+

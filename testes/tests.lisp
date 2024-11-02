@@ -475,3 +475,104 @@
     )
 )
 
+
+;exercício 16
+(defun teste-remove-index-x()
+    (let (
+            ( resultado1 ( remove-index-x '(1 1 2 3 3 3 4 5 5) 4 ) )
+            ( resultado2 ( remove-index-x '(0 4 5 4 1) 2 ) )
+            ( resultado3 ( remove-index-x '(5 2 2 1 3 4 4 5 2) 3 ) )
+            ( resultado4 ( remove-index-x '() 2 ) )
+         )
+    
+        (if (equal resultado1 '( 1 1 2 3 3 4 5 5 ) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '( 0 4 5 4 ))
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '( 5 2 2 1 3 4 5 2 ))
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (null resultado4)
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
+
+
+;exercício 17
+(defun teste-split-in-2-parts ()
+    (let (
+            ( resultado1 ( split-in-2-parts '(1 1 2 3 3 4 5 5) 4 ) )
+            ( resultado2 ( split-in-2-parts '(0 4 4 1) 2 ) )
+            ( resultado3 ( split-in-2-parts '(5 2 2 3 4 4 5 2) 3 ) )
+            ( resultado4 ( split-in-2-parts '() 2 ) )
+         )
+    
+        (if (equal resultado1 '( 1 1 2 3 3 4 5 5 ) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '( 0 4 5 4 ))
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '( 5 2 2 1 3 4 5 2 ))
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (null resultado4)
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
+
+
+;exercício 18
+(defun teste-slice-of-list ()
+    (let (
+            ( resultado1 ( slice-of-list '(1 1 2 3 3 4 5 5) 1 5 ) )
+            ( resultado2 ( slice-of-list '(0 4 4 1) 1 3 ) )
+            ( resultado3 ( slice-of-list '(5 2 2 3 4 4 5 2) 3 6 ) )
+            ( resultado4 ( slice-of-list '() 2 5) )
+            ( resultado5 ( slice-of-list '(5 2 2 3 4 4 5 2) 6 3 ) )
+         )
+    
+        (if (equal resultado1 '( 1 1 2 3 3 ) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '( 0 4 4 ))
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '( 2 3 4 4 ))
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (null resultado4)
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+
+        (if (null resultado5)
+            (format t "Teste 5: Aprovado. Retornou: ~a~% e um texto indicando para mudar o intervalo" resultado4)
+            (format t "Teste 5: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
