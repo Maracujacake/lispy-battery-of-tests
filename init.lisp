@@ -89,3 +89,11 @@
 ;(teste-combinations-group)
 (format t "~%-----------Exercício 28------------~%~%")
 (teste-list-sort)
+(format t "~%-----------Exercício 29------------~%~%")
+(teste-sort-by-freq-lists)
+(format t "~%-----------Exercício 31------------~%~%")
+(teste-is-prime)
+(format t "43123 é primo? ~a~%" (is-prime 43123))  ; Deve retornar NIL
+(format t "13 é primo? ~a~%" (is-prime 13))        ; Deve retornar T
+(format t "4 é primo? ~a~%" (is-prime 4))          ; Deve retornar NIL
+(format t "7 é primo? ~a~%" (is-prime 7))          ; Deve retornar T

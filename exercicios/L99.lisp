@@ -406,3 +406,44 @@
 
 
 ;exercício 29
+(defun sort-by-freq-lists (listas)
+  (let ((frequencias (make-hash-table :test 'equal)))
+
+    ; Calcula a frequência dos comprimentos das sublistas
+    (dolist (sublista listas)
+      (incf (gethash (length sublista) frequencias 0)))
+    
+    ; Define uma função para obter a frequência do comprimento de uma sublista
+    (flet ((frequencia-de-length (sublista)
+             (gethash (length sublista) frequencias)))
+      
+      ; Ordena as listas pela frequência do comprimento
+      (sort (copy-list listas) #'< :key #'frequencia-de-length))))
+
+
+;exercício 31
+; maneiras de fazer: 
+; - loop pra verificar se só existe 2 divisores
+; - checar em uma extensa lista de num. primos
+; - gpt abordagens (vai ser essa mesmo por causa da eficiencia)
+(defun is-prime (n)
+    (cond 
+        ((< n 2) nil)
+        ((= n 2) t)
+        ((= n 3) t)
+        ((or (= (mod n 2) 0) (= (mod n 3) 0)) nil)
+        (t
+            (let ( (limit (isqrt n)) 
+                   (i 5)) 
+
+                (loop while (<= i limit) do
+                    (if (or (= (mod n i) 0)  (= (mod n (+ i 2) ) 0))
+                        (return nil))
+                    (setf i (+ i 6 ))
+                )
+                t
+            )
+
+        )
+    )
+)

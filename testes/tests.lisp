@@ -897,3 +897,72 @@
         )
     )
 )
+
+
+
+;exercício 29
+; ordena por frequencia de tamanho das sublistas, do menos frequente ao mais
+; (em relacao a tamanho)
+(defun teste-sort-by-freq-lists
+ ()
+    (let (
+            ( resultado1 ( sort-by-freq-lists '( (1 5) (6) (4) (7 2) ) ) )
+            ( resultado2 ( sort-by-freq-lists '( (2 4 7) (8) (6) (5 456) (56) ) ) )
+            ( resultado3 ( sort-by-freq-lists '( (41) (54) (8489) (48 48941 254) ) ) )
+            ( resultado4 ( sort-by-freq-lists '( (1454) (8) (4) (5641565) (14) (51) ) ) )
+         )
+    
+        (if (equal resultado1 '((6) (4) (1 5) (7 2)) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '((8) (6) (56) (5 456) (2 4 7)) )
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '((41) (54) (8489) (48 48941 254)) )
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (equal resultado4 '((1454) (8) (4) (5641565) (14) (51)) )
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
+
+
+;exercício 31
+(defun teste-is-prime
+ ()
+    (let (
+            ( resultado1 ( is-prime 5 ) )
+            ( resultado2 ( is-prime 2 ) )
+            ( resultado3 ( is-prime 1234 ) )
+            ( resultado4 ( is-prime 43123 ) )
+         )
+    
+        (if (equal resultado1 '() )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '() )
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '() )
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (equal resultado4 '() )
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
