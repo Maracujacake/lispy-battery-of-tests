@@ -799,3 +799,101 @@
         )
     )
 )
+
+
+;exercício 26
+(defun teste-all-permutations ()
+    (let (
+            ( resultado1 ( all-permutations 2 '(1 5 6 4 7 2)) )
+            ( resultado2 ( all-permutations 2 '(2 4 7 8 6 5 456 56) ) )
+            ( resultado3 ( all-permutations 2 '(41 54 8489 48 48941 254) ) )
+            ( resultado4 ( all-permutations 2 '(1454 8 4 5641565 14 51) ) )
+         )
+    
+        (if (= (length resultado1) 15)
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (= (length resultado2) 28)
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (= (length resultado3) 15)
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (= (length resultado4) 15)
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
+
+
+#+nil(
+    ;exercício 27
+    (defun teste-combinations-group ()
+        (let (
+                ( resultado1 ( combinations-group 2 '(1 5 6 4 7 2)) )
+                ( resultado2 ( combinations-group 2 '(2 4 7 8 6 5 456 56) ) )
+                ( resultado3 ( combinations-group 2 '(41 54 8489 48 48941 254) ) )
+                ( resultado4 ( combinations-group 2 '(1454 8 4 5641565 14 51) ) )
+            )
+        
+            (if (= (length resultado1) 15)
+                (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+                (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+            )
+
+            (if (= (length resultado2) 28)
+                (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+                (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+            )
+
+            (if  (= (length resultado3) 15)
+                (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+                (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+            )
+
+            (if (= (length resultado4) 15)
+                (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+                (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+            )
+        )
+    )
+)
+
+;exercício 28
+(defun teste-list-sort
+ ()
+    (let (
+            ( resultado1 ( list-sort '( (1 5) (6) (4) (7 2) ) ) )
+            ( resultado2 ( list-sort '( (2 4 7) (8) (6) (5 456) (56) ) ) )
+            ( resultado3 ( list-sort '( (41) (54) (8489) (48 48941 254) ) ) )
+            ( resultado4 ( list-sort '( (1454) (8) (4) (5641565) (14) (51) ) ) )
+         )
+    
+        (if (equal resultado1 '((6) (4) (1 5) (7 2)) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '((8) (6) (56) (5 456) (2 4 7)) )
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '((41) (54) (8489) (48 48941 254)) )
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (equal resultado4 '((1454) (8) (4) (5641565) (14) (51)) )
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)

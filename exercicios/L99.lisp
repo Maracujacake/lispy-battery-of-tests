@@ -350,3 +350,59 @@
         )
     )
 )
+
+
+
+;exercício 26
+;o demonio em forma de código
+(defun all-permutations(x lista)
+    (if (or (< x 1) ( > x (length lista) ) )
+        nil
+        (if (= x 1)
+            (mapcar #'list lista)
+            (append 
+                (mapcar (lambda (subcomb)
+                    (cons (first lista) subcomb))
+                    (all-permutations (- x 1) (rest lista))
+                )
+                (all-permutations x (rest lista))
+            )
+        )
+    )
+)
+
+
+
+;exercício 27 p1
+;combinacao da lista com 2, 3 ou 4 integrantes
+; ERRADO, #+nil para comentário
+#+nil(
+    (defun combinations-group (tamanho grupo)
+        (let(
+                (result (make-hash-table :test 'equal))
+                (labels (
+                        (combine (combinacao-atual restantes)
+                            (if (= (length combinacao-atual) tamanho)
+                                (setf (gethash (sort (copy-list combinacao-atual) 'string<) result) t)
+                                (dolist (elemento restantes)
+                                    (combine (cons elemento combinacao-atual) (remove elemento restantes))
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+            ( combine '() grupo )
+            (loop for key being the hash-keys of result collect key)
+        )
+    )
+)
+
+;exercício 28
+; ordena as listas por número de elementos (length)
+(defun list-sort (lista)
+    (sort lista #'< :key #'length)
+)
+
+
+;exercício 29
