@@ -903,6 +903,7 @@
 ;exercício 29
 ; ordena por frequencia de tamanho das sublistas, do menos frequente ao mais
 ; (em relacao a tamanho)
+; verifique se, caso os testes falharem, se não "representam" a mesma lista, apenas alterando os valores de lugar
 (defun teste-sort-by-freq-lists
  ()
     (let (
@@ -936,8 +937,7 @@
 
 
 ;exercício 31
-(defun teste-is-prime
- ()
+(defun teste-is-prime ()
     (let (
             ( resultado1 ( is-prime 5 ) )
             ( resultado2 ( is-prime 2 ) )
@@ -945,12 +945,12 @@
             ( resultado4 ( is-prime 43123 ) )
          )
     
-        (if (equal resultado1 '() )
+        (if (equal resultado1 T )
             (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
             (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
         )
 
-        (if (equal resultado2 '() )
+        (if (equal resultado2 T )
             (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
             (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
         )
@@ -961,6 +961,39 @@
         )
 
         (if (equal resultado4 '() )
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
+
+
+;exercício 32
+;Lembrete: a implementação atual leva em consideração que SEMPRE x > y...
+(defun teste-mdc ()
+    (let (
+            ( resultado1 ( mdc 37 5) )
+            ( resultado2 ( mdc 92 3) )
+            ( resultado3 ( mdc 1234 4) )
+            ( resultado4 ( mdc 3768 1701) )
+         )
+    
+        (if (equal resultado1 1 )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 1 )
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 2 )
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (equal resultado4 3 )
             (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
             (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
         )

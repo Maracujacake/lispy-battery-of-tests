@@ -425,25 +425,31 @@
 ; maneiras de fazer: 
 ; - loop pra verificar se só existe 2 divisores
 ; - checar em uma extensa lista de num. primos
-; - gpt abordagens (vai ser essa mesmo por causa da eficiencia)
-(defun is-prime (n)
-    (cond 
-        ((< n 2) nil)
-        ((= n 2) t)
-        ((= n 3) t)
-        ((or (= (mod n 2) 0) (= (mod n 3) 0)) nil)
-        (t
-            (let ( (limit (isqrt n)) 
-                   (i 5)) 
-
-                (loop while (<= i limit) do
-                    (if (or (= (mod n i) 0)  (= (mod n (+ i 2) ) 0))
-                        (return nil))
-                    (setf i (+ i 6 ))
-                )
-                t
-            )
-
-        )
+; - gpt abordagens
+(defun is-prime-helper (n i)
+    (cond
+        ((= (mod n i) 0) nil)
+        ((>= n i) T)
+        (t (is-prime-helper n (+ i 1)))
     )
+)
+
+(defun is-prime (n)
+    (cond
+        ( (<= n 1) nil)
+        ( (= n 2) t)
+        ( (= n 3) t)
+        ( (evenp n) nil)
+        (t (is-prime-helper n 3))
+    )
+)
+
+
+;exercício 32
+;maior divisor comum, abordagem euclidiana
+(defun mdc (x y)
+    (cond
+        ((= y 0) x)
+        (t (mdc y (mod x y)) )
+    )   
 )
