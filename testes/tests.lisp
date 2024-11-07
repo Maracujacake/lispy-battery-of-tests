@@ -999,3 +999,33 @@
         )
     )
 )
+
+(defun teste-coprimos ()
+    (let (
+            ( resultado1 ( coprime 37 5) )
+            ( resultado2 ( coprime 92 3) )
+            ( resultado3 ( coprime 1234 4) )
+            ( resultado4 ( coprime 3768 1701) )
+         )
+    
+        (if (equal resultado1 T )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 T )
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 nil )
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (equal resultado4 nil )
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)

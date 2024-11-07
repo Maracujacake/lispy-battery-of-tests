@@ -95,3 +95,5 @@
 (teste-is-prime)
 (format t "~%-----------Exercício 32------------~%~%")
 (teste-mdc)
+(format t "~%-----------Exercício 33------------~%~%")
+(teste-coprimos)

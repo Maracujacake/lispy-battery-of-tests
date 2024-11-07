@@ -453,3 +453,10 @@
         (t (mdc y (mod x y)) )
     )   
 )
+
+
+;exercício 33
+
+(defun coprime (x y)
+    (= (mdc x y) 1)
+)
