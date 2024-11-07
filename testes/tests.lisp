@@ -1029,3 +1029,35 @@
         )
     )
 )
+
+
+
+(defun teste-euler-phi ()
+    (let (
+            ( resultado1 ( euler-phi 10) )
+            ( resultado2 ( euler-phi 92) )
+            ( resultado3 ( euler-phi 1234 ) )
+            ( resultado4 ( euler-phi 3768 ) )
+         )
+    
+        (if (equal resultado1 4 )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 44 )
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 616 )
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (equal resultado4 1248 )
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)

@@ -456,7 +456,23 @@
 
 
 ;exercício 33
-
+;dois numeros sao coprimos se o maior divisor comum entre eles é 1
 (defun coprime (x y)
     (= (mdc x y) 1)
+)
+
+
+;exercício 34
+(defun euler-phi (x)
+        (let(
+                (contador 0)
+            )
+
+        (dotimes (i x)
+            (if (coprime x i)
+                (incf contador)
+            )
+        )
+        contador
+    )
 )

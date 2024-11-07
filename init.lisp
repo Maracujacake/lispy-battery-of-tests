@@ -97,3 +97,5 @@
 (teste-mdc)
 (format t "~%-----------Exercício 33------------~%~%")
 (teste-coprimos)
+(format t "~%-----------Exercício 34------------~%~%")
+(teste-euler-phi)
