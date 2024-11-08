@@ -491,3 +491,19 @@
         (reverse fatores)
     )
 )
+
+
+;exercício 36
+(defun prime-factors-list (x)
+    (let (
+        (lista-temp nil)
+        (lista-final (prime-factors x))
+        (cont 1)
+    )
+
+        (dolist (elemento lista-final(reverse lista-temp))
+            (push (list elemento cont) lista-temp)
+        )
+
+    )
+)

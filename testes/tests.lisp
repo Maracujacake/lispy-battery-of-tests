@@ -1093,3 +1093,33 @@
         )
     )
 )
+
+(defun teste-prime-factors-list ()
+    (let (
+            ( resultado1 ( prime-factors-list 10) )
+            ( resultado2 ( prime-factors-list 92) )
+            ( resultado3 ( prime-factors-list 315 ) )
+            ( resultado4 ( prime-factors-list 12 ) )
+         )
+    
+        (if (equal resultado1 '((2 1) (5 1)) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '((2 1) (23 1)) )
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '((3 1) (5 1) (7 1) (35 1)) )
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (equal resultado4 '((2 1) (3 1)) )
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)

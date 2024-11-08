@@ -101,3 +101,5 @@
 (teste-euler-phi)
 (format t "~%-----------Exercício 35------------~%~%")
 (teste-prime-factors)
+(format t "~%-----------Exercício 36------------~%~%")
+(teste-prime-factors-list)
