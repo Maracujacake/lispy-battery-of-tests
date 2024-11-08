@@ -476,3 +476,18 @@
         contador
     )
 )
+
+
+;exercício 35
+(defun prime-factors (x)
+    (let (
+        (fatores nil)
+    )
+        (dotimes (i x)
+            (when (and (> i 1) (is-prime i) (= (mod x i) 0)) 
+                (push i fatores)
+            )
+        )
+        (reverse fatores)
+    )
+)

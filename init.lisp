@@ -99,3 +99,5 @@
 (teste-coprimos)
 (format t "~%-----------Exercício 34------------~%~%")
 (teste-euler-phi)
+(format t "~%-----------Exercício 35------------~%~%")
+(teste-prime-factors)
