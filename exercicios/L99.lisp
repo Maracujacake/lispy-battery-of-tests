@@ -426,13 +426,11 @@
 ; - loop pra verificar se só existe 2 divisores
 ; - checar em uma extensa lista de num. primos
 ; - gpt abordagens
-(defun is-prime-helper (n i)
-    (cond
-        ((= (mod n i) 0) nil)
-        ((>= n i) T)
-        (t (is-prime-helper n (+ i 1)))
-    )
-)
+(defun is-prime-helper (n divisor)
+  (cond
+    ((> (* divisor divisor) n) t)             
+    ((= (mod n divisor) 0) nil)               
+    (t (is-prime-helper n (+ divisor 2)))))
 
 (defun is-prime (n)
     (cond
@@ -505,5 +503,21 @@
             (push (list elemento cont) lista-temp)
         )
 
+    )
+)
+
+
+; oração porque tem uns exercícios que só deus na causa
+
+;exercício 39
+(defun list-primes (x y)
+    (let (
+        (primos nil)
+    )
+
+        (loop for num from x to y
+            when (is-prime num) do (push num primos)
+        )
+        (reverse primos)
     )
 )

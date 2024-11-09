@@ -103,3 +103,5 @@
 (teste-prime-factors)
 (format t "~%-----------Exercício 36------------~%~%")
 (teste-prime-factors-list)
+(format t "~%-----------Exercício 39------------~%~%")
+(teste-list-primes)
