@@ -521,3 +521,25 @@
         (reverse primos)
     )
 )
+
+
+;exercício 40
+(defun goldbach (x)
+    (let(
+        (first-primo 2)
+        (resposta nil)
+    )
+        (loop 
+           (let( (second-primo (- x first-primo)) )
+                (when (and (is-prime second-primo) (is-prime first-primo))
+                    (setq resposta (list second-primo first-primo))
+                    (return resposta)
+                )
+                (setq first-primo (+ first-primo 1))
+                (when (> first-primo (/ x 2))
+                    (return nil)
+                )           
+           )
+        )
+    )  
+)
