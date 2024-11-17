@@ -543,3 +543,17 @@
         )
     )  
 )
+
+
+;exercício 41
+(defun goldbach-par (lim-inf lim-sup)
+  "Versão recursiva para encontrar decomposições de números pares entre lim-inf e lim-sup."
+  (cond
+    ((> lim-inf lim-sup) nil) ;; Caso base: intervalo vazio.
+    ((and (> lim-inf 0) (= (mod lim-inf 2) 0)) ;; Número par e positivo.
+     (let ((resultado (goldbach lim-inf)))
+       (if resultado
+           (cons resultado (goldbach-par (1+ lim-inf) lim-sup)) ;; Adiciona à lista.
+           (goldbach-par (1+ lim-inf) lim-sup)))) ;; Ignora se não for válido.
+    (t (goldbach-par (1+ lim-inf) lim-sup)))) ;; Ignora números ímpares.
+

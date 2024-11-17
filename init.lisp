@@ -107,3 +107,7 @@
 (teste-list-primes)
 (format t "~%-----------Exercício 40------------~%~%")
 (teste-goldbach)
+(format t "~%-----------Exercício 41------------~%~%")
+(teste-goldbach-par)
+
+

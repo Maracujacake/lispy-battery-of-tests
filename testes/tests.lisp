@@ -1184,3 +1184,36 @@
         )
     )
 )
+
+
+(defun teste-goldbach-par ()
+    (let (
+            ( resultado1 ( goldbach-par 6 10) )
+            ( resultado2 ( goldbach-par 80 92) )
+            ( resultado3 ( goldbach-par 290 315) )
+            ( resultado4 ( goldbach-par 1 12) )
+         )
+    
+        (if (equal resultado1 '((3 3) (5 3) (7 3)) )
+            (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
+            (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
+        )
+
+        (if (equal resultado2 '((73 7) (79 3) (79 5) (83 3) (83 5) (83 7) (89 3)) )
+            (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
+            (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
+        )
+
+        (if  (equal resultado3 '((283 7) (281 11) (283 11) (293 3) (293 5) (293 7)
+                                (283 19) (293 11) (293 13) (277 31) (307 3) (307 5)
+                                (311 3)))
+            (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
+            (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
+        )
+
+        (if (equal resultado4 '((2 2) (3 3) (5 3) (7 3) (7 5)) )
+            (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
+            (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
+        )
+    )
+)
