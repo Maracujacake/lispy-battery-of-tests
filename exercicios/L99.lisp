@@ -175,7 +175,7 @@
                 )
             )
             (push 
-                (if (contador > 1)
+                (if (> contador 1)
                     (list contador anterior)
                     anterior
                 )

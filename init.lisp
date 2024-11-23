@@ -111,3 +111,4 @@
 (teste-goldbach-par)
 
 
+(sb-ext:exit)

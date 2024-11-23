@@ -211,7 +211,7 @@
             (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
         )
 
-        (if  (equal resultado3 '(1))
+        (if  (equal resultado3 '((1)))
             (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
             (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
         )
@@ -1000,6 +1000,7 @@
     )
 )
 
+;exercício 33
 (defun teste-coprimos ()
     (let (
             ( resultado1 ( coprime 37 5) )
@@ -1031,7 +1032,7 @@
 )
 
 
-
+;exercício 34
 (defun teste-euler-phi ()
     (let (
             ( resultado1 ( euler-phi 10) )
@@ -1063,7 +1064,7 @@
 )
 
 
-
+;exercício 35
 (defun teste-prime-factors ()
     (let (
             ( resultado1 ( prime-factors 10) )
@@ -1094,6 +1095,8 @@
     )
 )
 
+
+;exercício 36
 (defun teste-prime-factors-list ()
     (let (
             ( resultado1 ( prime-factors-list 10) )
@@ -1124,6 +1127,9 @@
     )
 )
 
+
+
+;exercício 39
 (defun teste-list-primes ()
     (let (
             ( resultado1 ( list-primes 10 20) )
@@ -1132,29 +1138,29 @@
             ( resultado4 ( list-primes 12 50) )
          )
     
-        (if (equal resultado1 '((2 1) (5 1)) )
+        (if (equal resultado1 '(11 13 17 19) )
             (format t "Teste 1: Aprovado. Retornou: ~a~%" resultado1)
             (format t "Teste 1: FALHOU. Retornou: ~a~%" resultado1)
         )
 
-        (if (equal resultado2 '((2 1) (23 1)) )
+        (if (equal resultado2 '(97) )
             (format t "Teste 2: Aprovado. Retornou: ~a~%" resultado2)
             (format t "Teste 2: FALHOU. Retornou: ~a~%" resultado2)
         )
 
-        (if  (equal resultado3 '((3 1) (5 1) (7 1) (35 1)) )
+        (if  (equal resultado3 '(317 331 337 347 349 353 359 367 373 379 383 389 397) )
             (format t "Teste 3: Aprovado. Retornou: ~a~%" resultado3)
             (format t "Teste 3: FALHOU. Retornou: ~a~%" resultado3)
         )
 
-        (if (equal resultado4 '((2 1) (3 1)) )
+        (if (equal resultado4 '(13 17 19 23 29 31 37 41 43 47) )
             (format t "Teste 4: Aprovado. Retornou: ~a~%" resultado4)
             (format t "Teste 4: FALHOU. Retornou: ~a~%" resultado4)
         )
     )
 )
 
-
+;exercício 40
 (defun teste-goldbach ()
     (let (
             ( resultado1 ( goldbach 10) )
@@ -1186,6 +1192,7 @@
 )
 
 
+;exercício 41
 (defun teste-goldbach-par ()
     (let (
             ( resultado1 ( goldbach-par 6 10) )
