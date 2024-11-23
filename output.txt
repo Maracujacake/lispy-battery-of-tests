@@ -15,7 +15,7 @@ Teste 1: Aprovado. Retornou: 6
 Teste 2: Aprovado. Retornou: 3
 Teste 3: Aprovado. Retornou NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 2------------
@@ -25,7 +25,7 @@ Teste 2: Aprovado. Retornou: (9 4)
 Teste 3: Aprovado. Retornou: (1)
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 3------------
@@ -35,7 +35,7 @@ Teste 2: Aprovado. Retornou: 5
 Teste 3: Aprovado. Retornou: 1
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 4------------
@@ -45,7 +45,7 @@ Teste 2: Aprovado. Retornou: 7
 Teste 3: Aprovado. Retornou: 1
 Teste 4: Aprovado. Retornou: 0
 
------------------------
+----------------------------------
 
 
 -----------Exercício 5------------
@@ -55,7 +55,7 @@ Teste 2: Aprovado. Retornou: (4 9 5 6 5 4 1)
 Teste 3: Aprovado. Retornou: (1)
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 6------------
@@ -65,7 +65,7 @@ Teste 2: Aprovado. Retornou: T
 Teste 3: Aprovado. Retornou: T
 Teste 4: Aprovado. Retornou: T
 
------------------------
+----------------------------------
 
 
 -----------Exercício 7------------
@@ -75,7 +75,7 @@ Teste 2: Aprovado. Retornou: (1 4 5 6 5 4 1)
 Teste 3: Aprovado. Retornou: ((1))
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 8------------
@@ -85,7 +85,7 @@ Teste 2: Aprovado. Retornou: (0 4 5 4 1)
 Teste 3: Aprovado. Retornou: (5 2 1 3 4 5 2)
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 9------------
@@ -95,7 +95,7 @@ Teste 2: Aprovado. Retornou: ((0) (4) (5) (4) (1))
 Teste 3: Aprovado. Retornou: ((5) (2 2) (1) (3) (4 4) (5) (2))
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 10------------
@@ -105,7 +105,7 @@ Teste 2: Aprovado. Retornou: ((1 0) (1 4) (1 5) (1 4) (1 1))
 Teste 3: Aprovado. Retornou: ((1 5) (2 2) (1 1) (1 3) (2 4) (1 5) (1 2))
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 11------------
@@ -115,7 +115,7 @@ Teste 2: Aprovado. Retornou: (0 4 5 4 1)
 Teste 3: Aprovado. Retornou: (5 (2 2) 1 3 (2 4) 5 2)
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 12------------
@@ -125,7 +125,7 @@ Teste 2: Aprovado. Retornou: ((0) (4) (5) (4) (1))
 Teste 3: Aprovado. Retornou: ((5) (2) (2) (1) (3) (4) (4) (5) (2))
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 13------------
@@ -135,7 +135,7 @@ Teste 2: Aprovado. Retornou: ((0) (4) (5) (4) (1))
 Teste 3: Aprovado. Retornou: ((5) (2) (2) (1) (3) (4) (4) (5) (2))
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 14------------
@@ -145,7 +145,7 @@ Teste 2: Aprovado. Retornou: (0 0 4 4 5 5 4 4 1 1)
 Teste 3: Aprovado. Retornou: (5 5 2 2 2 2 1 1 3 3 4 4 4 4 5 5 2 2)
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 15------------
@@ -155,7 +155,7 @@ Teste 2: Aprovado. Retornou: (0 0 4 4 5 5 4 4 1 1)
 Teste 3: Aprovado. Retornou: (5 5 2 2 2 2 1 1 3 3 4 4 4 4 5 5 2 2)
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 16------------
@@ -165,7 +165,7 @@ Teste 2: Aprovado. Retornou: (0 4 4 1)
 Teste 3: Aprovado. Retornou: (5 2 2 3 4 4 5 2)
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 17------------
@@ -175,7 +175,7 @@ Teste 2: FALHOU. Retornou: (0 4 1)
 Teste 3: FALHOU. Retornou: (5 2 2 4 4 5 2)
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 18------------
@@ -188,7 +188,7 @@ Teste 3: Aprovado. Retornou: (2 3 4 4)
 Teste 4: Aprovado. Retornou: NIL
 Teste 5: Aprovado. Retornou: NIL
  e um texto indicando para mudar o intervalo
------------------------
+----------------------------------
 
 
 -----------Exercício 19------------
@@ -198,7 +198,7 @@ Teste 2: Aprovado. Retornou: (4 4 1 0)
 Teste 3: Aprovado. Retornou: (5 2 5 2 2 3 4 4)
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 20------------
@@ -208,7 +208,7 @@ Teste 2: Aprovado. Retornou: (0 4 4 1)
 Teste 3: Aprovado. Retornou: (5 2 2 3 4 4 5 2)
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 21------------
@@ -218,7 +218,7 @@ Teste 2: Aprovado. Retornou: (0 4 2 4 1)
 Teste 3: Aprovado. Retornou: (5 2 2 4 3 4 4 5 2)
 Teste 4: Aprovado. Retornou: NIL
 
------------------------
+----------------------------------
 
 
 -----------Exercício 22------------
@@ -229,7 +229,7 @@ Teste 3: Aprovado. Retornou: (4 5 6 7)
 Teste 4: Aprovado. Retornou: (2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
                               21)
 
------------------------
+----------------------------------
 
 
 -----------Exercício 23------------
@@ -239,7 +239,7 @@ Teste 2: Aprovado. Retornou: (12 14)
 Teste 3: Aprovado. Retornou: (12 1245 451 1)
 Teste 4: Aprovado. Retornou: (13 141)
 
------------------------
+----------------------------------
 
 
 -----------Exercício 24------------
@@ -249,7 +249,7 @@ Teste 2: Aprovado. Retornou: (19 10 18)
 Teste 3: Aprovado. Retornou: (24 25 28 28)
 Teste 4: Aprovado. Retornou: (1)
 
------------------------
+----------------------------------
 
 
 -----------Exercício 25------------
@@ -259,7 +259,7 @@ Teste 2: Aprovado. Retornou: (4 8 456 6 5 2 56 7)
 Teste 3: Aprovado. Retornou: (254 48 54 48941 41 8489)
 Teste 4: Aprovado. Retornou: (51 4 14 8 1454 5641565)
 
------------------------
+----------------------------------
 
 
 -----------Exercício 26------------
@@ -280,10 +280,13 @@ Teste 4: Aprovado. Retornou: ((1454 8) (1454 4) (1454 5641565) (1454 14)
                               (4 5641565) (4 14) (4 51) (5641565 14)
                               (5641565 51) (14 51))
 
------------------------
+----------------------------------
 
 
 -----------Exercício 27------------
+
+
+----------------------------------
 
 
 -----------Exercício 28------------
@@ -293,12 +296,18 @@ Teste 2: Aprovado. Retornou: ((8) (6) (56) (5 456) (2 4 7))
 Teste 3: Aprovado. Retornou: ((41) (54) (8489) (48 48941 254))
 Teste 4: Aprovado. Retornou: ((1454) (8) (4) (5641565) (14) (51))
 
+----------------------------------
+
+
 -----------Exercício 29------------
 
 Teste 1: FALHOU. Retornou: ((1 5) (6) (4) (7 2))
 Teste 2: FALHOU. Retornou: ((2 4 7) (5 456) (8) (6) (56))
 Teste 3: FALHOU. Retornou: ((48 48941 254) (41) (54) (8489))
 Teste 4: Aprovado. Retornou: ((1454) (8) (4) (5641565) (14) (51))
+
+----------------------------------
+
 
 -----------Exercício 31------------
 
@@ -307,12 +316,18 @@ Teste 2: Aprovado. Retornou: T
 Teste 3: Aprovado. Retornou: NIL
 Teste 4: Aprovado. Retornou: NIL
 
+----------------------------------
+
+
 -----------Exercício 32------------
 
 Teste 1: Aprovado. Retornou: 1
 Teste 2: Aprovado. Retornou: 1
 Teste 3: Aprovado. Retornou: 2
 Teste 4: Aprovado. Retornou: 3
+
+----------------------------------
+
 
 -----------Exercício 33------------
 
@@ -321,12 +336,18 @@ Teste 2: Aprovado. Retornou: T
 Teste 3: Aprovado. Retornou: NIL
 Teste 4: Aprovado. Retornou: NIL
 
+----------------------------------
+
+
 -----------Exercício 34------------
 
 Teste 1: Aprovado. Retornou: 4
 Teste 2: Aprovado. Retornou: 44
 Teste 3: Aprovado. Retornou: 616
 Teste 4: Aprovado. Retornou: 1248
+
+----------------------------------
+
 
 -----------Exercício 35------------
 
@@ -335,12 +356,18 @@ Teste 2: Aprovado. Retornou: (2 23)
 Teste 3: FALHOU. Retornou: (3 5 7)
 Teste 4: Aprovado. Retornou: (2 3)
 
+----------------------------------
+
+
 -----------Exercício 36------------
 
 Teste 1: Aprovado. Retornou: ((2 1) (5 1))
 Teste 2: Aprovado. Retornou: ((2 1) (23 1))
 Teste 3: FALHOU. Retornou: ((3 1) (5 1) (7 1))
 Teste 4: Aprovado. Retornou: ((2 1) (3 1))
+
+----------------------------------
+
 
 -----------Exercício 39------------
 
@@ -350,12 +377,18 @@ Teste 3: Aprovado. Retornou: (317 331 337 347 349 353 359 367 373 379 383 389
                               397)
 Teste 4: Aprovado. Retornou: (13 17 19 23 29 31 37 41 43 47)
 
+----------------------------------
+
+
 -----------Exercício 40------------
 
 Teste 1: Aprovado. Retornou: (7 3)
 Teste 2: Aprovado. Retornou: (89 3)
 Teste 3: Aprovado. Retornou: (313 2)
 Teste 4: Aprovado. Retornou: (7 5)
+
+----------------------------------
+
 
 -----------Exercício 41------------
 
@@ -365,3 +398,6 @@ Teste 3: Aprovado. Retornou: ((283 7) (281 11) (283 11) (293 3) (293 5) (293 7)
                               (283 19) (293 11) (293 13) (277 31) (307 3)
                               (307 5) (311 3))
 Teste 4: Aprovado. Retornou: ((2 2) (3 3) (5 3) (7 3) (7 5))
+
+-------------FIM DOS TESTES----------
+
