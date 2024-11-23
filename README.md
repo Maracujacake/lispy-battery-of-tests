@@ -18,6 +18,8 @@ Abra o repositório no GitHub Codespaces ou clone-o na sua máquina utilizando o
 ` git clone https://github.com/Maracujacake/lispy-battery-of-tests.git `
 
 Outra alternativa é criar um codespaces no ambiente do repositório no github:
+
+
 ![alt text](image.png)
 
 **Substitua as Soluções ou Crie as suas em outro arquivo**:  
@@ -25,6 +27,8 @@ Substitua as resoluções no arquivo `exercicios/L99.lisp` pelas suas próprias 
 
 É possível também criar outro arquivo `arquivo.lisp` e adicionar as soluções com os mesmos nomes descritos nos testes, ou então modificar o nome descrito nos testes para bater com o da sua função.
 - Após isso, deve-se carregar o arquivo que implementou suas funções no arquivo `init.lisp` tal qual mostra a print abaixo:
+
+
 ![alt text](image-1.png)
 
 **Modificar Testes**:  
