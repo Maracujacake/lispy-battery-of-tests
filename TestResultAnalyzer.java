@@ -12,6 +12,9 @@ public class TestResultAnalyzer {
             int currentExercise = 0;
             String currentTest = "";
 
+            // Exibe uma mensagem chamativa antes de mostrar as falhas
+            System.out.println("\033[1;33m---------------------------- ANÁLISE DE TESTES ----------------------------\033[0m");
+
             // Loop para ler linha por linha da saída do arquivo
             while ((line = reader.readLine()) != null) {
                 // Detecta o número do exercício (e.g., "Exercício 1")
@@ -25,12 +28,17 @@ public class TestResultAnalyzer {
                 // Verifica se a linha contém "FALHOU"
                 if (line.contains("FALHOU")) {
                     failedTests++;
-                    System.out.println("Falha no " + currentTest + ": " + line);
+                    System.out.println("\033[31mFalha no " + currentTest + ": " + line + "\033[0m"); // Falha em vermelho
                 }
             }
 
             // Resumo final de falhas
-            System.out.println("\nTotal de falhas: " + failedTests);
+            if (failedTests > 0) {
+                System.out.println("\n\033[31mTotal de falhas: " + failedTests + "\033[0m"); // Total de falhas em vermelho
+            } else {
+                System.out.println("\n\033[32mTodos os testes passaram com sucesso!\033[0m"); // Todos os testes passaram em verde
+            }
+
             reader.close();
 
         } catch (IOException e) {
